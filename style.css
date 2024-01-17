@@ -1,0 +1,521 @@
+:root {
+  --secondary: #379501;
+  --calmwhite: #fffffe;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffffe;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  padding: 0.5rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar img {
+  width: 1.3rem;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a span {
+  color: white;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.navbar .navbar-nav a {
+  color: var(--calmwhite);
+  font-size: 1rem;
+  margin: 0 1rem;
+  display: inline-block;
+  font-family: 'poppins', sans-serif;
+  font-weight: 900;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #379501;
+  transition: 0.5s;
+}
+
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.3rem;
+  border-bottom: 0.1rem solid var(--calmwhite);
+  transform: scaleX(0);
+  transition: 0.2s;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: var(--calmwhite);
+  margin: 0 0.4rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #379501;
+  transition: 0.5s;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  margin: 1% 8%;
+  background-image: url(img/Hero.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 30rem;
+}
+
+.hero .content {
+  margin-right: 6rem;
+}
+
+.hero .content h1 {
+  font-size: 3rem;
+  font-family: 'poppins', sans-serif;
+  font-weight: 900;
+}
+
+.hero .content h1 span:hover {
+  color: #d3ea10;
+  cursor: pointer;
+}
+
+.hero .content p {
+  color: #379501;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.hero .content a {
+  display: inline-block;
+  margin-top: 5rem;
+  padding: 0.9rem 1.8rem;
+  font-family: 'poppins', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  transition: 0.5s;
+}
+
+.hero .content .ap {
+  background-color: black;
+  border: 0.2rem solid black;
+  border-radius: 1rem;
+  color: var(--calmwhite);
+}
+
+.hero .content .ap:hover {
+  background-color: var(--calmwhite);
+  border: 0.2rem solid black;
+  border-radius: 1rem;
+  color: black;
+}
+
+.hero .content .ao {
+  color: black;
+  border: 0.2rem solid black;
+  border-radius: 1rem;
+}
+
+.hero .content .ao:hover {
+  background-color: black;
+  border: 0.2rem solid black;
+  border-radius: 1rem;
+  color: var(--calmwhite);
+}
+
+.hero .content img {
+  display: block;
+  margin-left: 10rem;
+}
+
+.about {
+  min-height: 50rem;
+  background-color: #000000;
+}
+
+.about .about-header,
+.product .product-header,
+.contact .contact-header {
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.about .about-header h1,
+.contact .contact-header h1 {
+  color: var(--calmwhite);
+  font-size: 2rem;
+  font-family: 'poppins', sans-serif;
+  font-weight: 900;
+  padding-bottom: 0.5rem;
+}
+
+.about .about-header p,
+.contact .contact-header p {
+  color: #d3ea10;
+}
+
+.product .product-header p {
+  color: #379501;
+}
+
+.about .row,
+.contact .row {
+  display: flex;
+  justify-content: space-around;
+}
+.about .row .about-img {
+  flex: 50rem;
+  margin: 3rem 8rem;
+}
+.about .row .about-img img {
+  width: 50%;
+  margin-left: 10rem;
+  margin-bottom: 10rem;
+}
+
+.about .row .content {
+  text-align: left;
+  margin: 2rem 8.5rem;
+}
+
+.about .row .content h2 {
+  color: var(--calmwhite);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-family: 'poppins', sans-serif;
+  font-weight: 900;
+}
+
+.about .row .content p {
+  color: var(--calmwhite);
+}
+
+.product {
+  min-height: 50rem;
+}
+
+.product .product-header h1 {
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  font-family: 'poppins', sans-serif;
+  font-weight: 900;
+  padding-bottom: 0.5rem;
+}
+
+.product .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.product .row .card {
+  background-color: #000000;
+  padding-bottom: 1.2rem;
+  border-radius: 0.3rem;
+  margin: 0 5rem;
+}
+
+.product .row .card img {
+  background-color: var(--calmwhite);
+  border: 0.1rem solid black;
+  object-fit: cover;
+  width: 15rem;
+}
+
+.product .row .card .content {
+  background-color: #000000;
+}
+
+.product .row .card h2 {
+  color: var(--calmwhite);
+  font-family: 'poppins', sans-serif;
+  font-weight: 900;
+  margin-left: 1rem;
+}
+.product .row .card p {
+  color: var(--calmwhite);
+  padding-bottom: 1rem;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+.product .row .card a {
+  justify-content: center;
+  padding: 0.4rem 2rem;
+  color: black;
+  border-radius: 0.3rem;
+  background-color: var(--calmwhite);
+  font-family: 'poppins', sans-serif;
+  font-weight: 900;
+  margin: 0 3.5rem;
+  transition: 0.3s;
+}
+
+.product .row .card a:hover {
+  background-color: black;
+  border: 0.05rem solid var(--calmwhite);
+  border-radius: 0.3rem;
+  color: var(--calmwhite);
+}
+
+.contact {
+  min-height: 30rem;
+  background-color: #000000;
+}
+
+.contact .row .content h2 {
+  color: var(--calmwhite);
+  font-size: 2rem;
+  font-family: 'poppins', sans-serif;
+  font-weight: 900;
+  margin-top: 1rem;
+  margin-left: 10rem;
+  transition: 0.3s;
+}
+
+.contact .row .content h2:hover {
+  cursor: pointer;
+  color: #379501;
+}
+
+.contact .row .medsos {
+  display: flex;
+  margin-right: 10rem;
+}
+.contact .row .medsos .instagram {
+  filter: grayscale(1);
+  transition: 0.5s;
+}
+
+.contact .row .medsos .instagram:hover {
+  filter: grayscale(0);
+}
+.contact .row .medsos .whatsapp {
+  filter: grayscale(1);
+  transition: 0.3s;
+}
+
+.contact .row .medsos .whatsapp:hover {
+  filter: grayscale(0);
+}
+.contact .row .medsos img {
+  margin: 0 3rem;
+  width: 13rem;
+}
+
+footer .row {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+
+footer .row .content1 h2,
+footer .row .cotent1 h1,
+footer .row .content2 h2 {
+  margin: 2rem 0;
+  font-family: 'poppins', sans-serif;
+  font-weight: 900;
+}
+
+footer .row .content1 p {
+  margin: 2rem 0;
+}
+
+footer .row .content2 {
+  margin-top: 2rem;
+  margin-right: 5rem;
+}
+footer .row .content2 a {
+  color: #000000;
+  transition: 0.3s;
+}
+footer .row .content2 a:hover {
+  color: #379501;
+}
+
+footer .end {
+  text-align: center;
+  background-color: #379501;
+  color: var(--calmwhite);
+  padding: 0.5rem 0;
+}
+
+#btt {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #379501;
+  cursor: pointer;
+  padding: 0.7rem 1.1rem;
+  border-radius: 50%;
+  transition: 1s;
+  font-size: 2rem;
+}
+
+#btt a {
+  display: block;
+  color: white;
+}
+
+#btt:hover {
+  background-color: #379501;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 840px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .hero {
+    min-height: 45vh;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #000000;
+    width: 25rem;
+    height: 25rem;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    display: block;
+    margin: 2rem 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.3);
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+  .about {
+    min-height: 70rem;
+  }
+
+  .about .about-header h1 {
+    font-size: 2.5rem;
+  }
+  .about .about-header p {
+    font-size: 1.5rem;
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+    padding-bottom: 10rem;
+  }
+
+  .about .row .about-img img {
+    height: 70%;
+    width: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-left: 7rem;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h2 {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.6;
+  }
+
+  .product .product-header h1 {
+    font-size: 2.5rem;
+  }
+  .product .product-header p {
+    font-size: 1.5rem;
+  }
+
+  .product .row .card {
+    margin-bottom: 5rem;
+  }
+
+  .contact h2 {
+    display: none;
+  }
+
+  .contact .row .medsos {
+    margin-left: 10rem;
+  }
+}
